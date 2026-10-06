@@ -1,0 +1,30 @@
+=== (a) Max Heap insertion ===
+Insert 45 : [45]
+Insert 72 : [72, 45]
+Insert 30 : [72, 45, 30]
+Insert 90 : [90, 72, 30, 45]
+Insert 65 : [90, 72, 30, 45, 65]
+Insert 50 : [90, 72, 50, 45, 65, 30]
+Insert 85 : [90, 72, 85, 45, 65, 30, 50]
+Heap height = 2, comparisons = 9, swaps = 5
+
+=== (b) Heap Sort ===
+  Input : [45, 72, 30, 90, 65, 50, 85]
+  After build-heap : [90, 72, 85, 45, 65, 50, 30]
+  Extract 90 -> [85, 72, 50, 45, 65, 30, 90]
+  Extract 85 -> [72, 65, 50, 45, 30, 85, 90]
+  Extract 72 -> [65, 45, 50, 30, 72, 85, 90]
+  Extract 65 -> [50, 45, 30, 65, 72, 85, 90]
+  Extract 50 -> [45, 30, 50, 65, 72, 85, 90]
+  Extract 45 -> [30, 45, 50, 65, 72, 85, 90]
+  Sorted: [30, 45, 50, 65, 72, 85, 90]
+Heap Sort: comparisons = 21, swaps = 18
+
+=== (b) Quick Sort ===
+  Input : [45, 72, 30, 90, 65, 50, 85]
+  pivot=85 (range 0..6) -> [45, 72, 30, 65, 50, 85, 90]
+  pivot=50 (range 0..4) -> [45, 30, 50, 65, 72, 85, 90]
+  pivot=30 (range 0..1) -> [30, 45, 50, 65, 72, 85, 90]
+  pivot=72 (range 3..4) -> [30, 45, 50, 65, 72, 85, 90]
+  Sorted: [30, 45, 50, 65, 72, 85, 90]
+Quick Sort: comparisons = 12, swaps = 6
